@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,700,400);
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	margin-bottom: 65px;
+}
+
+a {
+	cursor: pointer;
+  text-decoration: none;
+  color: #00878B;
+}
+
+a:hover {
+	color: #00AFB2;
+}
+
+.content {
+	margin: 20px auto;
+	max-width: 1920px;
+	text-align: center;
+}
+
+.content .logo {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+#comic_image {
+	max-width: 100%;
+}
+
+#alt_text {
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid;
+}
+
+.footer {
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-top: 1px solid #999;
+  background-color: #FFF;
+}
+
+.about {
+  text-align: right;
+}
+
+@media (max-width: 765px) {
+  body {
+    margin-bottom: 110px;
+  }
+
+  .footer {
+    font-size: 75%;
+    display: block;
+  }
+
+  .about {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+
+@media print {
+	.content > *:not(.printable), .footer {
+		display: none;
+	}
+
+	.printable img {
+		max-height: 7in;
+		max-width: 100%;
+	}
+}
